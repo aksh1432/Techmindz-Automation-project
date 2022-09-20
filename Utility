@@ -1,0 +1,17 @@
+package Utility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebDriverUtility {
+	public static WebDriver driver;
+	public static void launchBrowser(String driverpath,String url)
+	{
+	
+		System.setProperty("webdriver.chrome.driver",driverpath);
+	    driver= new ChromeDriver();
+	    driver.get(url);
+	    driver.manage().window().maximize();
+	   }
+	
+}
